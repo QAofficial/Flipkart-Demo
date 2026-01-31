@@ -1,12 +1,9 @@
-from selenium import webdriver
+'''from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time 
 
 
-
-#selenium 3
-
-'''driver = webdriver.Chrome()
+driver = webdriver.Chrome()
 driver.get("https://opensource-demo.orangehrmlive.com/")
 
 driver.maximize_window()
@@ -25,13 +22,6 @@ else:
     print("Login Test Fail ")
 
 '''
-driver.find_element(By.NAME)
-
-
-
-
-
-
 
 
 
@@ -43,15 +33,9 @@ search = driver.find_element(By.NAME,"q")
 search.send_keys("selenium")
 search.submit()
 
-
 driver.find_element(By.XPATH, "//h3[text()='selenium']").click()
 
 '''
-
-
-
-
-
 
 
 
@@ -167,5 +151,82 @@ print("Button attribute type : ", button.get_attribute('type'))
 
 #driver.find_element(By.LINK_TEXT, " Inc").click()
 #driver.find_element(By.XPATH, '//*[@id="root"]/div/main/div[3]/div[3]/select[1]')
+
+
+
+'''option = webdriver.ChromeOptions()
+option.add_argument("--disable-notifications")
+
+driver = webdriver.Chrome(options=option)
+
+driver.get("https://whatmylocation.com/")
+driver.maximize_window()
+
+time.sleep(3)'''
+
+'''
+driver = webdriver.Chrome()
+
+driver.get("https://testautomationpractice.blogspot.com/")
+
+driver.maximize_window()
+
+numOfRows = len(driver.find_elements(By.XPATH,"//table[@name='BookTable']//tr"))
+
+numOfColumn = len(driver.find_elements(By.XPATH,"//table[@name='BookTable']//tr[1]/th"))
+
+print("Number of Rows:" ,numOfRows)
+print("Number of Column:" ,numOfColumn)
+
+# data = driver.find_element(By.XPATH, "//table[@name='BookTable']/tbody/tr[5]/td[1]").text
+# print(data)
+
+print("printing all Rows and Column data..............")
+
+for r in range(2, numOfRows+1):
+    for c in range(1,numOfColumn+1):
+        data = driver.find_element(By.XPATH, f"//table[@name='BookTable']/tbody/tr[{r}]/td[{c}]").text
+        print(data, end=' | ')  
+    print()
+    print("-" * 47)
+
+# for r in range(2,numOfRows+1):
+    
+#     author = driver.find_element(By.XPATH,"//table[@name='BookTable']/tbody/tr["+str(r)+"]/td[2]").text
+#     if author == "Mukesh":
+#         book = driver.find_element(By.XPATH,"//table[@name='BookTable']/tbody/tr["+str(r)+"]/td[1]").text
+#         bookprice = driver.find_element(By.XPATH,"//table[@name='BookTable']/tbody/tr["+str(r)+"]/td[4]").text
+#         print(book, "  ", author, "   ", bookprice)
+
+driver.close()
+
+time.sleep(3)'''
+
+
+
+# driver = webdriver.Chrome()
+# driver.get("https://opensource-demo.orangehrmlive.com")
+# driver.maximize_window()
+
+# time.sleep(3)
+
+# driver.find_element(By.XPATH, "//input[@placeholder='Username']").send_keys("Admin")
+# time.sleep(1)
+
+# driver.find_element(By.XPATH, "//input[@placeholder='Password']").send_keys("admin123")
+# time.sleep(1)
+
+# driver.find_element(By.XPATH, "//button[normalize-space()='Login']").click()
+# time.sleep(3)
+
+# driver.find_element(By.XPATH, "//li[1]//a[1]//span[1]").click()
+# time.sleep(1)
+
+# driver.find_element(By.XPATH, "//li[1]//a[1]//span[1]").click()
+# time.sleep(1)
+
+# driver.close()
+
+
 
 

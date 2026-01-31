@@ -1,22 +1,20 @@
-# from selenium import webdriver
-# from selenium.webdriver.chrome.service import Service
-# from webdriver_manager.chrome import ChromeDriverManager
+# # from selenium import webdriver
+# # from selenium.webdriver.chrome.service import Service
+# # from webdriver_manager.chrome import ChromeDriverManager
 
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-import time
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# import time
 
 # driver.get("https://egyan.ptgn.in/login")
 
-# Print page title
 # print("Page title is:", driver.title)
 
-# Close the browser
 # driver.quit()
 
 
 
-driver = webdriver.Chrome()
+# driver = webdriver.Chrome()
 
 '''# from selenium.webdriver.chrome.service import Service
 # from webdriver_manager.chrome import ChromeDriverManager
